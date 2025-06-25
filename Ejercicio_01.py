@@ -108,3 +108,6 @@ print(f"Left Shift: {bin(bit_left_shift)}")
 print(f"Right Shift: {bin(bit_right_shift)}")
 
 
+for i in range(10, 56):
+    if i % 2 == 0 and i != 16 and i % 3 != 0:
+        print(i)
