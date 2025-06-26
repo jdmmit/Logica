@@ -1,5 +1,4 @@
-# 02
-# FUNCIONES Y ALCANCE
+# 02_FUNCIONES Y ALCANCE
 
 """
  * EJERCICIO:
@@ -32,6 +31,99 @@
  * Cada lenguaje sigue una convenciones que debes de respetar para que el código se entienda.
  
  """
+# Simple
+
+def greet():
+  print("¡Hola, Python!")
+
+greet()
+
+# Con Retorno
+
+def return_greet():
+    return "¡Hola, Python!1"
+
+return_greet()
+
+
+print(return_greet())
+
+# Funcion con un argumento
+
+def arg_greet(name):
+    print(f"Hola, {name}!")
+
+
+arg_greet("juan")
+
+# Funcion con un argumentos
+
+def args_greet(greet,name):
+    print(f"{greet}, {name}!")
+
+
+args_greet("Hi", "juan")
+
+# Funcion con un argumento predeterminado
+
+def default_arg_greet(name = "Python"):
+    print(f"Hola, {name}!")
+
+
+default_arg_greet("juan")
+default_arg_greet()
+
+# Funcion con un argumentos y retorno
+
+def return_args_greet(greet,name):
+    return(f"{greet}, {name}!")
+
+
+print(return_args_greet("Hi", "juan"))
+
+# funcion con multiples retornos
+
+def multiples_return_greet():
+    return "Hola", "Python"
+
+greet, name = multiples_return_greet()
+print(greet)
+print(name)
+
+# Funcion con un numero variable de argumentos
+
+def variable_arg_greet(*names):
+    for name in names:
+        print(f"Hola, {name}!")
+
+variable_arg_greet("python", "Juan", "Pedro")
+
+# Funcion con un numero variable de argumentos con palabra clave
+
+def variable_key_arg_greet(**names):
+    for key, value in names.items():
+        print(f"Hola, {value} ({key})!")
+
+variable_key_arg_greet(
+    languege="python", 
+    name="Juan", 
+    alias="jdmmit", 
+    edad="42"
+    )
+
+# Funcion dentro de funciones
+
+def outer_funcion():
+    def inner_funcion():
+        print("Funcion interna: ¡Hola, Python! 2")
+    inner_funcion()
+
+outer_funcion()
+
+
+
+
+
 
 # Función sin parámetros ni retorno
 def funcion_sin_parametros():
